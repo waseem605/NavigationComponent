@@ -9,11 +9,58 @@
         android:id="@+id/homeFragment"
         android:name="com.jenergy.solar.navigationcomponent.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewTransectionFragment"
+            app:destination="@id/viewTransectionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chooseReceiverFragment"
+            app:destination="@id/chooseReceiverFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/viewBalanceFragment2"
+        android:id="@+id/viewBalanceFragment"
         android:name="com.jenergy.solar.navigationcomponent.ViewBalanceFragment"
         android:label="fragment_balance_view"
         tools:layout="@layout/fragment_balance_view" />
+    <fragment
+        android:id="@+id/viewTransectionFragment"
+        android:name="com.jenergy.solar.navigationcomponent.ViewTransectionFragment"
+        android:label="fragment_trasection_view"
+        tools:layout="@layout/fragment_trasection_view" >
+        <action
+            android:id="@+id/action_viewTransectionFragment_to_sendCashFragment"
+            app:destination="@id/sendCashFragment" >
+            <argument
+                android:name="amount"
+                android:defaultValue="150" />
+            <argument
+                android:name="receiverName"
+                android:defaultValue="name" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/chooseReceiverFragment"
+        android:name="com.jenergy.solar.navigationcomponent.ChooseReceiverFragment"
+        android:label="fragment_receiver_choose"
+        tools:layout="@layout/fragment_receiver_choose" >
+        <action
+            android:id="@+id/action_chooseReceiverFragment_to_sendCashFragment"
+            app:destination="@id/sendCashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendCashFragment"
+        android:name="com.jenergy.solar.navigationcomponent.SendCashFragment"
+        android:label="fragment_cash_send"
+        tools:layout="@layout/fragment_cash_send" >
+        <argument
+            android:name="receiverName"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

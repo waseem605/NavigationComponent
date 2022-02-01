@@ -59,7 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewSendBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="15dp"/>
+        android:layout_margin="55dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

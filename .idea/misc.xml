@@ -4,11 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/dialog_confirm_receiver.xml" value="0.20416666666666666" />
+        <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/fragment_about.xml" value="0.20416666666666666" />
         <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/fragment_balance_view.xml" value="0.20416666666666666" />
         <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/fragment_cash_send.xml" value="0.20416666666666666" />
         <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/fragment_notification.xml" value="0.20416666666666666" />
         <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/fragment_receiver_choose.xml" value="0.20416666666666666" />
+        <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/fragment_setting.xml" value="0.20416666666666666" />
         <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/layout/fragment_trasection_view.xml" value="0.20416666666666666" />
+        <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Study/AndroidStudio(all)/NAvigationComponent/app/src/main/res/menu/main_nav_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

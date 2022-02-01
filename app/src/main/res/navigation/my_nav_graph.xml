@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.jenergy.solar.navigationcomponent.HomeFragment"
-        android:label="fragment_home"
+        android:name="com.jenergy.solar.navigationcomponent.fragment.HomeFragment"
+        android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_viewBalanceFragment"
@@ -23,12 +23,12 @@
     <fragment
         android:id="@+id/viewBalanceFragment"
         android:name="com.jenergy.solar.navigationcomponent.ViewBalanceFragment"
-        android:label="fragment_balance_view"
+        android:label="View Balance"
         tools:layout="@layout/fragment_balance_view" />
     <fragment
         android:id="@+id/viewTransectionFragment"
         android:name="com.jenergy.solar.navigationcomponent.ViewTransectionFragment"
-        android:label="fragment_trasection_view"
+        android:label="Transaction"
         tools:layout="@layout/fragment_trasection_view" >
         <action
             android:id="@+id/action_viewTransectionFragment_to_sendCashFragment"
@@ -43,8 +43,8 @@
     </fragment>
     <fragment
         android:id="@+id/chooseReceiverFragment"
-        android:name="com.jenergy.solar.navigationcomponent.ChooseReceiverFragment"
-        android:label="fragment_receiver_choose"
+        android:name="com.jenergy.solar.navigationcomponent.fragment.ChooseReceiverFragment"
+        android:label="Choose Receiver"
         tools:layout="@layout/fragment_receiver_choose" >
         <action
             android:id="@+id/action_chooseReceiverFragment_to_sendCashFragment"
@@ -53,7 +53,7 @@
     <fragment
         android:id="@+id/sendCashFragment"
         android:name="com.jenergy.solar.navigationcomponent.SendCashFragment"
-        android:label="fragment_cash_send"
+        android:label="Cash send"
         tools:layout="@layout/fragment_cash_send" >
         <argument
             android:name="receiverName"
@@ -61,6 +61,41 @@
         <argument
             android:name="amount"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_sendCashFragment_to_confirmDialog"
+            app:destination="@id/confirmDialog" />
+        <action
+            android:id="@+id/action_sendCashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <dialog
+        android:id="@+id/confirmDialog"
+        android:name="com.jenergy.solar.navigationcomponent.dialog.confirmDialog"
+        android:label="dialog_confirm_receiver"
+        tools:layout="@layout/dialog_confirm_receiver" >
+        <argument
+            android:name="receiverName"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="long" />
+    </dialog>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.jenergy.solar.navigationcomponent.fragment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.jenergy.solar.navigationcomponent.fragment.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.jenergy.solar.navigationcomponent.fragment.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
 
 </navigation>

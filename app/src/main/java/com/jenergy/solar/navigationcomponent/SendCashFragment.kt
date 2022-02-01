@@ -10,10 +10,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.jenergy.solar.navigationcomponent.databinding.FragmentCashSendBinding
 import com.jenergy.solar.navigationcomponent.databinding.FragmentHomeBinding
+import kotlin.properties.Delegates
 
 
 class SendCashFragment : Fragment() {
     lateinit var binding: FragmentCashSendBinding
+    var receiverAmount:String = ""
     private val args:SendCashFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -30,9 +32,24 @@ class SendCashFragment : Fragment() {
         val navController = findNavController()
 
         val receiverName = args.receiverName
-        val receiverAmount = args.amount
+        receiverAmount = args.amount.toString()
         binding.tv1.text = "Send cash to $receiverName"
         binding.etAmountName.setText(receiverAmount.toString())
+
+        binding.viewSendBtn.setOnClickListener {
+            receiverAmount = binding.etAmountName.text.trim().toString()
+            val action = SendCashFragmentDirections.actionSendCashFragmentToConfirmDialog(receiverName,
+                receiverAmount.toLong())
+            navController.navigate(action)
+        }
+
+        binding.cancelBtn.setOnClickListener {
+            findNavController().popBackStack(R.id.homeFragment,true)
+        }
+        binding.viewDoneBtn.setOnClickListener {
+            val action = SendCashFragmentDirections.actionSendCashFragmentToHomeFragment()
+            navController.navigate(action)
+        }
     }
 
 }

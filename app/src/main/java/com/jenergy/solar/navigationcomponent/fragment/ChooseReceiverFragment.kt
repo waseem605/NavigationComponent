@@ -1,4 +1,4 @@
-package com.jenergy.solar.navigationcomponent
+package com.jenergy.solar.navigationcomponent.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.jenergy.solar.navigationcomponent.databinding.FragmentHomeBinding
 import com.jenergy.solar.navigationcomponent.databinding.FragmentReceiverChooseBinding
 
 
@@ -32,8 +31,15 @@ class ChooseReceiverFragment : Fragment() {
 /*
             val  args = Bundle()
             args.putString("receiverName",receiverName)*/
-            val action = ChooseReceiverFragmentDirections.actionChooseReceiverFragmentToSendCashFragment(receiverName,500)
+            val action =ChooseReceiverFragmentDirections.actionChooseReceiverFragmentToSendCashFragment(
+                    receiverName,
+                    500
+                )
             findNavController().navigate(action)
+        }
+
+        binding.cancelBtn.setOnClickListener {
+            findNavController().popBackStack()
         }
 
     }

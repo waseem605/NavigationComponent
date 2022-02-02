@@ -36,6 +36,10 @@ class SettingFragment : Fragment() {
             val defaultValue = binding.etAmount.text.toString().toLong()
             SampleData.defaultAmount.value = defaultValue
         }
+        binding.aboutBtn.setOnClickListener {
+            val action = SettingFragmentDirections.actionGlobalAboutFragment()
+            findNavController().navigate(action)
+        }
     }
 
 

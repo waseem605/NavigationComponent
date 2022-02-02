@@ -85,7 +85,7 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.jenergy.solar.navigationcomponent.fragment.AboutFragment"
-        android:label="fragment_about"
+        android:label="About fragment"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/notificationFragment"
@@ -97,5 +97,8 @@
         android:name="com.jenergy.solar.navigationcomponent.fragment.SettingFragment"
         android:label="Setting"
         tools:layout="@layout/fragment_setting" />
+
+    <action android:id="@+id/action_global_aboutFragment"
+        app:destination="@id/aboutFragment" />
 
 </navigation>

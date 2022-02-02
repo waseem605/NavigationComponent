@@ -8,4 +8,10 @@
         android:menuCategory="secondary"
         android:icon="@drawable/ic_baseline_settings"/>
 
+    <item android:id="@+id/id_aboutApp"
+        android:title="/About App"
+        app:showAsAction="always"
+        android:menuCategory="secondary"
+        android:icon="@drawable/ic_baseline_settings"/>
+
 </menu>

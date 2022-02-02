@@ -10,6 +10,7 @@ import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.jenergy.solar.navigationcomponent.databinding.ActivityMainBinding
+import com.jenergy.solar.navigationcomponent.fragment.HomeFragmentDirections
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -34,7 +35,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+        return when(item.itemId){
+            R.id.id_aboutApp->{
+                val action =HomeFragmentDirections.actionGlobalAboutFragment()
+                navController.navigate(action)
+                    return true
+            }else->{
+                item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+            }
+        }
+
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
